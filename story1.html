@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Die Eisfabrik | Booba und Matteo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="story">
+  <a class="back" href="index.html">← Alle Geschichten</a>
+  <h1>Die Eisfabrik</h1>
+  <p class="byline">Geschichte 1 · Vorgelesen von Ingrid</p>
+  <img src="images/story1.jpg" alt="Die Eisfabrik">
+  <button class="play" id="play"><span class="icon">▶</span><span id="label">Vorlesen</span></button>
+  <audio id="audio" src="audio/story1.mp3" preload="metadata" controls></audio>
+  <p class="note">Du kannst die Seite geöffnet lassen und beim Umblättern weiterhören.</p>
+</main>
+<script>
+const audio = document.getElementById('audio');
+const button = document.getElementById('play');
+const label = document.getElementById('label');
+const icon = button.querySelector('.icon');
+button.addEventListener('click', () => {
+  if (audio.paused) { audio.play(); } else { audio.pause(); }
+});
+audio.addEventListener('play', () => { icon.textContent = '❚❚'; label.textContent = 'Pause'; });
+audio.addEventListener('pause', () => { icon.textContent = '▶'; label.textContent = 'Weiter'; });
+audio.addEventListener('ended', () => { icon.textContent = '▶'; label.textContent = 'Nochmal'; });
+</script>
+</body>
+</html>

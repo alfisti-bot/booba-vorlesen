@@ -1,0 +1,27 @@
+:root { --purple:#67208A; --purple-dark:#4A1668; --cream:#FFF9F0; --peach:#FBE6D6; --pink:#E86A8A; --brown:#4A3426; --butter:#F6C95C; }
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin:0; background:var(--cream); color:var(--brown); font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height:1.5; }
+.hero { background:var(--purple); color:#fff; text-align:center; padding:34px 20px 44px; }
+.hero h1 { font-family:"Chalkboard SE", "Comic Sans MS", "Arial Rounded MT Bold", sans-serif; font-size:clamp(2.4rem, 9vw, 3.6rem); margin:0 0 6px; letter-spacing:.5px; }
+.hero p { margin:0; opacity:.9; font-size:1.05rem; }
+.cover { width:min(70%, 280px); border-radius:18px; margin-top:20px; box-shadow:0 14px 34px rgba(0,0,0,.3); }
+.container { max-width:960px; margin:0 auto; padding:28px 18px 60px; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:18px; }
+.card { display:block; background:#fff; border-radius:18px; overflow:hidden; text-decoration:none; color:var(--brown); box-shadow:0 6px 18px rgba(74,52,38,.1); border:1px solid #F0D6C2; transition:transform .15s ease; }
+.card:active { transform:scale(.98); }
+.card img { width:100%; aspect-ratio:16/9; object-fit:cover; display:block; }
+.card .body { padding:14px 16px 18px; }
+.card h2 { margin:0 0 4px; font-size:1.15rem; }
+.card span { color:var(--pink); font-weight:700; }
+.story { max-width:720px; margin:0 auto; padding:22px 18px 60px; }
+.story h1 { font-family:"Chalkboard SE", "Comic Sans MS", "Arial Rounded MT Bold", sans-serif; text-align:center; color:var(--purple); font-size:clamp(1.9rem, 7vw, 3rem); margin:16px 0 4px; }
+.story .byline { text-align:center; color:#7A6450; margin:0 0 18px; }
+.story img { width:100%; border-radius:18px; display:block; box-shadow:0 10px 26px rgba(74,52,38,.16); }
+.play { display:flex; align-items:center; justify-content:center; gap:12px; width:100%; margin:24px 0 12px; padding:18px 20px; border:none; border-radius:999px; background:var(--pink); color:#fff; font-size:1.25rem; font-weight:700; cursor:pointer; box-shadow:0 10px 24px rgba(232,106,138,.35); }
+.play .icon { font-size:1.1rem; }
+audio { width:100%; margin-top:8px; }
+.back { display:inline-block; margin-bottom:14px; color:var(--purple); text-decoration:none; font-weight:600; }
+.note { font-size:.9rem; color:#7A6450; text-align:center; margin-top:20px; }
+.private { font-size:.8rem; color:#9B8A78; text-align:center; margin-top:30px; }
+@media (max-width:480px) { .hero { padding:26px 16px 34px; } .container { padding:20px 14px 44px; } .story { padding:16px 14px 44px; } }
